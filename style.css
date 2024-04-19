@@ -14,11 +14,11 @@ body{
     font-family: 'Chakra Petch', sans-serif;
 }
 .conteudo-principal {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px; 
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
@@ -28,12 +28,35 @@ body{
     font-size: 32px;
 }
 .botao{
-    font-family: "chkra petch" ,sans-serif;
+    font-family: "Chakra Petch",sans-serif;
     background-color: var(--botao-inativo);
+    color: var(--branco);
     display: flex;
     justify-content: center;
     padding: 1em;
     font-size: 18px;
     align-items: center;
     width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+.botoes{
+    display: block;
+}
+@media screen and (min-width: 768px){
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }   
+}
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
 }
